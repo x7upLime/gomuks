@@ -442,6 +442,7 @@ func (c *Container) Start() {
 					c.Logout()
 				} else {
 					debug.Print("Sync() errored", err)
+					c.Logout()
 				}
 			} else {
 				debug.Print("Sync() returned without error")
